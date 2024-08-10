@@ -1,3 +1,9 @@
+/***********************************************************************
+ * Autor: G. Cruz
+ * Materia: Sistemas Operativos
+ * Fecha: 25-07-24
+ ***********************************************************************/
+
 #include <iostream>
 #include <cstdio>
 #include <cstring>
