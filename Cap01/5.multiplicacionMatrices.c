@@ -35,7 +35,7 @@ int main(int argc, char* argv[]) {
     int n = atoi(argv[1]); 
     int size = n * n;
     
-    /*Memoria dinamica asignada para las matrices*/
+    /*Memoria dinamica asignada para las matrices como se aprendio en clase*/
     int *mA = (int *)malloc(size * sizeof(int));
     int *mB = (int *)malloc(size * sizeof(int));
     int *mC = (int *)malloc(size * sizeof(int));
@@ -54,11 +54,11 @@ int main(int argc, char* argv[]) {
         mC[i] = 0;
     }
     
-    /*Impirme las matrices A y B*/
+    /*imprime las matrices A y B*/
     imprimirMatriz(mA, n);
     imprimirMatriz(mB, n);
 
-    /*Multiplicación de matrices con un solo bucle*/
+    /*Multiplicacion de matrices*/
     for (int i = 0; i < size; i++) {
         int fila = i / n;  
         int columna = i % n; 
