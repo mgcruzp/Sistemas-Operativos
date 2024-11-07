@@ -21,7 +21,7 @@ pthread_mutex_t mutex = PTHREAD_MUTEX_INITIALIZER;
 
 // Funcion de contar que la va a ejectitar cada uno de los hilos
 void *contar(void *arg) {
-    int hilo_id = (int)arg;
+    int hilo_id = *(int*)arg;
 
     // Bucle para esperar su turno
     while (1) {
