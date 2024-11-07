@@ -20,7 +20,7 @@ int turno = 0;  // este seria como el primer hijo a ejecutar pero sirve mas como
 pthread_mutex_t mutex = PTHREAD_MUTEX_INITIALIZER;
 
 // Funcion de contar que la va a ejectitar cada uno de los hilos
-void *contarHilos(void *arg) {
+void *contar(void *arg) {
     int hilo_id = (int)arg;
 
     // Bucle para esperar su turno
@@ -55,7 +55,7 @@ int main() {
 
     // se crean los 5 hilos que se piden en el anuncaido
     for (int i = 0; i < 5; i++) {
-        if (pthread_create(&hilos[i], NULL, contarHilos, &ids[i]) != 0) {
+        if (pthread_create(&hilos[i], NULL, contar, &ids[i]) != 0) {
             printf("Error al crear el hilo\n");
             return 1;
         }
