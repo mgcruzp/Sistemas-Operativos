@@ -13,21 +13,21 @@
 #include <unistd.h>
 #include <pthread.h>
 
-// Variable global 
-int turno = 0;  // este seria como el primer hijo a ejecutar
+// variable global 
+int turno = 0;  // este seria como el primer hijo a ejecutar pero sirve mas como turno para ir comparando mas abajito e ir mirando el hulo
 
 // Mutex 
 pthread_mutex_t mutex = PTHREAD_MUTEX_INITIALIZER;
 
 // Funcion de contar que la va a ejectitar cada uno de los hilos
-void *contar(void *arg) {
-    int hilo_id = (int)arg;  // Obtener el ID del hilo
+void *contarHilos(void *arg) {
+    int hilo_id = (int)arg;
 
     // Bucle para esperar su turno
     while (1) {
-        pthread_mutex_lock(&mutex);  // Adquirir el mutex para acceder a turno
+        pthread_mutex_lock(&mutex);  // mutex para acceder a turno
 
-        if (turno == hilo_id - 1) {  // Si es el turno del hilo, comienza
+        if (turno == hilo_id - 1) { ¿
             printf("Hilo %d iniciado\n", hilo_id);
 
             // Bucle que cuenta hasta 300 como se pidio en el enunciado
@@ -55,7 +55,7 @@ int main() {
 
     // se crean los 5 hilos que se piden en el anuncaido
     for (int i = 0; i < 5; i++) {
-        if (pthread_create(&hilos[i], NULL, contar, &ids[i]) != 0) {
+        if (pthread_create(&hilos[i], NULL, contarHilos, &ids[i]) != 0) {
             printf("Error al crear el hilo\n");
             return 1;
         }
@@ -68,3 +68,4 @@ int main() {
 
     return 0;
 }
+
