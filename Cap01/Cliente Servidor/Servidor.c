@@ -1,3 +1,9 @@
+/***********************************************************************
+ * Autor: G. Cruz
+ * Materia: Sistemas Operativos
+ * Fecha: 17-10-24
+ * Tema: Comunicacion entre procesos: Cliente-Servidor con FIFO
+ ***********************************************************************/
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
