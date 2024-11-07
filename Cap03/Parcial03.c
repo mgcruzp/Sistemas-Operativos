@@ -27,7 +27,7 @@ void *contarHilos(void *arg) {
     while (1) {
         pthread_mutex_lock(&mutex);  // mutex para acceder a turno
 
-        if (turno == hilo_id - 1) { ¿
+        if (turno == hilo_id - 1) { 
             printf("Hilo %d iniciado\n", hilo_id);
 
             // Bucle que cuenta hasta 300 como se pidio en el enunciado
