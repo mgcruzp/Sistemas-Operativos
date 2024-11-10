@@ -1,12 +1,15 @@
-/**************************************************************
-		Pontificia Universidad Javeriana
-	Autor: G. Cruz
-	Materia: Sistemas Operativos
-	Tema: Taller de Evaluación de Rendimiento
-	Fichero: fuente de multiplicación de matrices NxN por hilos.
-	Objetivo: Evaluar el tiempo de ejecución del 
-		      algoritmo clásico de multiplicación de matrices.
-			  Se implementa con la Biblioteca POSIX Pthreads.
+/****************************************************************
+        Pontificia Universidad Javeriana
+    Autor: Juan Diego Muñoz Angulo, David Roa Neisa,
+            Jorge Humberto Sierra Laiton, Michelle Gabriela Cruz Pino,
+            Sofia Carolina Mantilla Vega
+    Fecha: 13 Noviembre 2024
+    Materia: Sistemas Operativos
+    Tema: Taller de Evaluación de Rendimiento
+    Fichero:fuente de multiplicación de matrices NxN por hilos.
+    Objetivo: Evaluar el tiempo de ejecución del 
+              algoritmo clásico de multiplicación de matrices.
+              Se implementa con la Biblioteca POSIX Pthreads
 ****************************************************************/
 
 #include <stdio.h>
